@@ -1,0 +1,2362 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.TA06D3.com/ontologies/pencarianjurusan#"
+     xml:base="http://www.TA06D3.com/ontologies/pencarianjurusan"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan">
+        <rdfs:comment>Ontologi jurusan yang digunakan untuk mendeskripsikan konsep dan hubungan pada domain jurusan</rdfs:comment>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDi">
+        <owl:inverseOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#berlokasiDi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDiPerguruanTinggi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDiPerguruanTinggi">
+        <owl:inverseOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiProgramStudi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#berlokasiDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#berlokasiDi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#dimilikiOleh -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#dimilikiOleh">
+        <owl:inverseOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiPerguruanTinggi"/>
+        <owl:inverseOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiProgramStudi"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiPerguruanTinggi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiPerguruanTinggi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiProgramStudi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiProgramStudi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiDayaTampung -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiDayaTampung">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiProgramStudi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiProgramStudi">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#menyediakanFasilitas -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#menyediakanFasilitas">
+        <owl:inverseOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#tergantungPada"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#tergantungPada -->
+
+    <owl:ObjectProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#tergantungPada">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#InverseFunctionalProperty"/>
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:range rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiJumlahDayaTampung -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiJumlahDayaTampung">
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiSingkatan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiSingkatan">
+        <rdfs:domain rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#dimilikiOleh"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#dimilikiOleh"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <owl:disjointWith rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDi"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#tergantungPada"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#tergantungPada"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriInstitut"/>
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiProgramStudi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiProgramStudi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#menyediakanFasilitas"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#berlokasiDi"/>
+                <owl:minQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:minQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiPerguruanTinggi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriInstitut -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriInstitut">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <owl:disjointWith rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+                    <rdf:Description rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#beradaDiPerguruanTinggi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiPerguruanTinggi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiAkreditasiProgramStudi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#memilikiDayaTampung"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <owl:disjointWith rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum -->
+
+    <owl:Class rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum">
+        <rdfs:subClassOf rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#A">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+        <rdfs:label xml:lang="en">A</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#ATM -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#ATM">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">ATM</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#C"/>
+        <memilikiDayaTampung rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#32"/>
+        <rdfs:label xml:lang="en">Agribisnis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Agroteknologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Aktuaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Aktuaria">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <rdfs:label xml:lang="en">Aktuaria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Siliwangi&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Akuntansi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Arsitektur -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Arsitektur">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Arsitektur</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Asrama -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Asrama">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Asrama</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Atletik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Atletik">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Atletik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#B">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+        <rdfs:label xml:lang="en">B</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Biologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#C">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+        <rdfs:label xml:lang="en">C</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Cafe -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Cafe">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Cafe</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Farmasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Farmasi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Farmasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Fisika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Free_hotspot -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Free_hotspot">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Free Hotspot</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Gizi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Gizi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Gizi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Kantin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Keperawatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Keperawatan">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Keperawatan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Kimia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Klinik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Klinik">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Klinik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Laboratorium -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Laboratorium">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Laboratorium</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi"/>
+        <rdfs:label xml:lang="en">Manajemen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Masjid -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Masjid">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Masjid</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Matematika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Mushalla -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Mushalla">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Mushalla</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Penginapan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Penginapan">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Penginapan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Perpustakaan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Poliklinik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Poliklinik">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Poliklinik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Psikologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Psikologi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Psikologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Restoran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Restoran">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Restoran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Sosiologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Sosiologi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Sosiologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Studio -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Studio">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Studio</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#TIK -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#TIK">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">TIK</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Transportasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Transportasi">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Transportasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#Wartel -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#Wartel">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Wartel</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#AkreditasiProgramStudi"/>
+        <rdfs:label xml:lang="en">-</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;ATM_Center&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;ATM_Center&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">ATM Center</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Angkutan_dalam_kampus&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Angkutan_dalam_kampus&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Angkutan dalam kampus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Asrama_Padjajaran&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Asrama_Padjajaran&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Asrama Padjadjaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Auditorium_Bale_Santika&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Auditorium_Bale_Santika&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Auditorium Bale Santika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;BNI&apos;46&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;BNI&apos;46&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">BNI&apos;46</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bahasa_dan_Sastra_Inggris&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bahasa_dan_Sastra_Inggris&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Bahasa dan Sastra Inggris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Bahasa&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Bahasa&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Balai Bahasa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Pertemuan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Pertemuan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Balai Pertemuan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Kesehatan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Kesehatan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Bale Kesehatan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Santika&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Santika&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Bale Santika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bisnis_Digital&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bisnis_Digital&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Bisnis Digital</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Desain_Komunikasi_Visual&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Desain_Komunikasi_Visual&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Desain Komunikasi Visual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Pembangunan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Pembangunan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Ekonomi Pembangunan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Syariah&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Syariah&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <rdfs:label xml:lang="en">Ekonomi Syariah</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Film_dan_Televisi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Film_dan_Televisi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Film dan Televisi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Gedung_pertunjukan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Gedung_pertunjukan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Gedung pertunjukan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;IPB_Shop&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;IPB_Shop&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">IPB Shop</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Hukum&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Hukum&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Ilmu Hukum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Keolahragaan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Keolahragaan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Ilmu Keolahragaan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komputer&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komputer&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Ilmu Komputer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komunikasi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komunikasi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Ilmu Komunikasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Pemerintahan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Pemerintahan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <rdfs:label xml:lang="en">Ilmu Pemerintahan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Politik&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Politik&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Ilmu Politik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Pertanian_Bogor&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Pertanian_Bogor&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriInstitut"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Raya_Dramaga_Kampus_IPB_Dramaga_Bogor_16680_West_Java,_Indonesia&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#A"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Aktuaria"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Pembangunan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Syariah&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komputer&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kedokteran_Hewan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Idustri_Pertanian&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Pangan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ATM"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Asrama"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Cafe"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Masjid"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Penginapan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Restoran"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;IPB_Shop&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Percetakan_IPB_Press&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Penelitian&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sport_center&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Student_service_center&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Transportasi_kampus&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">IPB</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Institut Pertanian Bogor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Seni_Budaya_Indonesia_Bandung&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Seni_Budaya_Indonesia_Bandung&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriInstitut"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Buah_Batu_No._212_Bandung&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Studio"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#TIK"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Gedung_pertunjukan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_kesehatan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lab_Bahasa&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Peralatan_pertunjukan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sarana_Olahraga&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Tempat_Ibadah&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISBI</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Institut Seni Budaya Indonesia Bandung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_A.H._Nasution_No._105,_Cipadung,_Cibiru,_Kota_Bandung,_Jawa_Barat_40614&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_A.H._Nasution_No._105,_Cipadung,_Cibiru,_Kota_Bandung,_Jawa_Barat_40614&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <rdfs:label xml:lang="en">Jalan A.H. Nasution No. 105, Cipadung, Cibiru, Kota Bandung, Jawa Barat 40614</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cileunyi_Kabupaten_Bandung,_Jawa_Barat_40292&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cileunyi_Kabupaten_Bandung,_Jawa_Barat_40292&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <rdfs:label xml:lang="en">Jalan Cileunyi Kabupaten Bandung, Jawa Barat 40292</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cimencrang,_Panyileukan,_Cimencrang,_Gedebage,_Kota_Bandung,_Jawa_Barat_40292&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cimencrang,_Panyileukan,_Cimencrang,_Gedebage,_Kota_Bandung,_Jawa_Barat_40292&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <rdfs:label xml:lang="en">Jalan Cimencrang, Panyileukan, Cimencrang, Gedebage, Kota Bandung, Jawa Barat 40292</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Buah_Batu_No._212_Bandung&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Buah_Batu_No._212_Bandung&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Seni_Budaya_Indonesia_Bandung&apos;"/>
+        <rdfs:label xml:lang="en">Jl. Buah Batu No. 212 Bandung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Dr._Setiabudhi_No._229_Bandung_40154_Jawa_Barat_-_Indonesia&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Dr._Setiabudhi_No._229_Bandung_40154_Jawa_Barat_-_Indonesia&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Jl. Dr. Setiabudhi No. 229 Bandung 40154 Jawa Barat - Indonesia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._H.S._Ronggowaluyo__Teluk_Jambe_Karawang_41361&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._H.S._Ronggowaluyo__Teluk_Jambe_Karawang_41361&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <rdfs:label xml:lang="en">Jl. H.S. Ronggowaluyo  Teluk Jambe Karawang 41361</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Raya_Dramaga_Kampus_IPB_Dramaga_Bogor_16680_West_Java,_Indonesia&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Raya_Dramaga_Kampus_IPB_Dramaga_Bogor_16680_West_Java,_Indonesia&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Institut_Pertanian_Bogor&apos;"/>
+        <rdfs:label xml:lang="en">Jl. Raya Dramaga Kampus IPB Dramaga Bogor 16680 West Java, Indonesia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Siliwangi_No._24_Kota_Tasikmalaya_46115_Jawa_Barat&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Siliwangi_No._24_Kota_Tasikmalaya_46115_Jawa_Barat&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Siliwangi&apos;"/>
+        <rdfs:label xml:lang="en">Jl. Siliwangi No. 24 Kota Tasikmalaya 46115 Jawa Barat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jurnal_Blog_Dosen&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jurnal_Blog_Dosen&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Jurnal Blog Dosen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kampus_Jatinangor_Jln._Raya_Bandung-Sumedang_Km._21_Jatinangor,_Kab._Sumedang_45363_Jawa_Barat&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kampus_Jatinangor_Jln._Raya_Bandung-Sumedang_Km._21_Jatinangor,_Kab._Sumedang_45363_Jawa_Barat&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Alamat"/>
+        <beradaDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Kampus Jatinangor Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab.Sumedang 45363 Jawa Barat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kantor_Pos&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kantor_Pos&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Kantor Pos</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kedokteran_Hewan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kedokteran_Hewan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Kedokteran Hewan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kendaraan_Dinas&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kendaraan_Dinas&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Kendaraan Dinas</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kewirausahaan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kewirausahaan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Kewirausahaan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_Padjadjaran&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_Padjadjaran&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Klinik Padjadjaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_kesehatan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_kesehatan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Klinik kesehatan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Koperasi_Pegawai&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Koperasi_Pegawai&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Koperasi Pegawai</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lab_Bahasa&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lab_Bahasa&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Lab Bahasa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lab_Komputer&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lab_Komputer&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Lab Komputer</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Laboratorium_Central&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Laboratorium_Central&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Laboratorium Central</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Basket&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Basket&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Lapangan Bola Basket</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Voli&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Voli&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Lapangan Bola Voli</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lintasan_Lari&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lintasan_Lari&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Lintasan Lari</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al-Furqan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al-Furqan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Mesjid Al-Furqan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al_Khoir&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al_Khoir&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Mesjid Al Khoir</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Panjat_Tebing&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Panjat_Tebing&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Panjat Tebing</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_Inggris&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_Inggris&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Bahasa Inggris</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_dan_Sastra_Indonesia&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_dan_Sastra_Indonesia&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#C"/>
+        <rdfs:label xml:lang="en">Pendidikan Bahasa dan Sastra Indonesia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Biologi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Biologi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <rdfs:label xml:lang="en">Pendidikan Biologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Ekonomi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Ekonomi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Ekonomi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Fisika&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Fisika&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <rdfs:label xml:lang="en">Pendidikan Fisika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Geografi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Geografi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Geografi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Jasmani,_Kesehatan,_dan_Rekreasi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Jasmani,_Kesehatan,_dan_Rekreasi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Jasmani, Kesehatan, dan Rekreasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Masyarakat&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Masyarakat&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Masyarakat</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Matematika&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Matematika&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Pendidikan Matematika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Sejarah&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Sejarah&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSoshum"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Pendidikan Sejarah</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Peralatan_pertunjukan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Peralatan_pertunjukan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Peralatan Pertunjukan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Percetakan_IPB_Press&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Percetakan_IPB_Press&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Percetakan IPB Press</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Bahasa&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Bahasa&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Pusat Bahasa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Pusat Kebugaran dan Kecantikan Fitness Ideal</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Basic_Science&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Basic_Science&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Pusat Pelayanan Basic Science</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Terpadu_Unpad&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Terpadu_Unpad&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Pusat Pelayanan Terpadu Unpad</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Penelitian&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Penelitian&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Pusat Penelitian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Kuliah&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Kuliah&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Ruang Kuliah</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Serba_Guna_Gedung_2&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Serba_Guna_Gedung_2&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Ruang Serba Guna Gedung 2</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Gigi_Mulut&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Gigi_Mulut&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Rumah Sakit Gigi Mulut</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Pendidikan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Pendidikan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Rumah Sakit Pendidikan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sarana_Olahraga&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sarana_Olahraga&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Sarana Olahraga</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sistem_Informasi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sistem_Informasi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Sistem Informasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sport_center&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sport_center&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Sport Center</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Stadion_Jati_Padjadjaran&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Stadion_Jati_Padjadjaran&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Stadion Jati Padjadjaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Student_service_center&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Student_service_center&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Student Service Center</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teater_Terbuka&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teater_Terbuka&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Teater Terbuka</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Teknik Elektro</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Geologi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Geologi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdfs:label xml:lang="en">Teknik Geologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Industri&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Industri&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Teknik Industri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Informatika&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Informatika&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <rdfs:label xml:lang="en">Teknik Informatika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Kimia&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Kimia&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Teknik Kimia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Mesin&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Mesin&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <memilikiAkreditasiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;-&apos;"/>
+        <rdfs:label xml:lang="en">Teknik Mesin</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Sipil&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Sipil&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;"/>
+        <rdfs:label xml:lang="en">Teknik Sipil</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Idustri_Pertanian&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Idustri_Pertanian&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Teknologi Industri Pertanian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Pangan&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Pangan&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudi"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#ProgramStudiSaintek"/>
+        <beradaDiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;"/>
+        <rdfs:label xml:lang="en">Teknologi Pangan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Tempat_Ibadah&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Tempat_Ibadah&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Tempat Ibadah</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;The_Sixty_Two_Resto_and_Lounge&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;The_Sixty_Two_Resto_and_Lounge&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">The Sixty Two Resto and Lounge</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Training_Center_Universita&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Training_Center_Universita&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Training Center Universita</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Transportasi_kampus&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Transportasi_kampus&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Transportasi Kampus</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Islam_Negeri_Sunan_Gunung_Djati&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_A.H._Nasution_No._105,_Cipadung,_Cibiru,_Kota_Bandung,_Jawa_Barat_40614&apos;"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cileunyi_Kabupaten_Bandung,_Jawa_Barat_40292&apos;"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jalan_Cimencrang,_Panyileukan,_Cimencrang,_Gedebage,_Kota_Bandung,_Jawa_Barat_40292&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#A"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Psikologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Sosiologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bahasa_dan_Sastra_Inggris&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Hukum&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Politik&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Informatika&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Cafe"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Klinik"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Laboratorium"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Masjid"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Poliklinik"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Koperasi_Pegawai&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sport_center&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UINSGD</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Universitas Islam Negeri Sunan Gunung Djati</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Padjadjaran&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kampus_Jatinangor_Jln._Raya_Bandung-Sumedang_Km._21_Jatinangor,_Kab._Sumedang_45363_Jawa_Barat&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#A"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Farmasi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Keperawatan"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Psikologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Sosiologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bisnis_Digital&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Pembangunan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Film_dan_Televisi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Hukum&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komunikasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Pemerintahan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Politik&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kedokteran_Hewan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Geologi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Informatika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Idustri_Pertanian&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknologi_Pangan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;ATM_Center&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Angkutan_dalam_kampus&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Asrama_Padjajaran&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Auditorium_Bale_Santika&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Kesehatan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bale_Santika&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kantor_Pos&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Klinik_Padjadjaran&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Laboratorium_Central&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Bahasa&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Basic_Science&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pusat_Pelayanan_Terpadu_Unpad&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Serba_Guna_Gedung_2&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Gigi_Mulut&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Rumah_Sakit_Pendidikan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Stadion_Jati_Padjadjaran&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;The_Sixty_Two_Resto_and_Lounge&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Unpad_Training_Centre&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNPAD</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Universitas Padjadjaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Pendidikan_Indonesia&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Dr._Setiabudhi_No._229_Bandung_40154_Jawa_Barat_-_Indonesia&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#A"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Biologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fisika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Keperawatan"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kimia"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Matematika"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Psikologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bahasa_dan_Sastra_Inggris&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Bisnis_Digital&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Desain_Komunikasi_Visual&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Film_dan_Televisi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Keolahragaan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komputer&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komunikasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kewirausahaan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_Inggris&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_dan_Sastra_Indonesia&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Biologi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Ekonomi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Fisika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Geografi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Jasmani,_Kesehatan,_dan_Rekreasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Masyarakat&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Matematika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Sejarah&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sistem_Informasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Sipil&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Asrama"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Poliklinik"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Wartel"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;BNI&apos;46&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Bahasa&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Balai_Pertemuan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Kendaraan_Dinas&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al-Furqan&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ruang_Kuliah&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sarana_Olahraga&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teater_Terbuka&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Training_Center_Universita&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UPI</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Universitas Pendidikan Indonesia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Siliwangi&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Siliwangi&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._Siliwangi_No._24_Kota_Tasikmalaya_46115_Jawa_Barat&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Gizi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Pembangunan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ekonomi_Syariah&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Politik&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_Inggris&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Biologi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Fisika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Geografi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Masyarakat&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Matematika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Sejarah&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Sipil&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Kantin"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Perpustakaan"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jurnal_Blog_Dosen&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNSIL</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Universitas Siliwangi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Universitas_Singaperbangsa_Karawang&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeri"/>
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#PerguruanTinggiNegeriUniversitas"/>
+        <berlokasiDi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Jl._H.S._Ronggowaluyo__Teluk_Jambe_Karawang_41361&apos;"/>
+        <memilikiAkreditasiPerguruanTinggi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#B"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agribisnis"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Agroteknologi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Akuntansi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Farmasi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Gizi"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Manajemen"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Hukum&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Keolahragaan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Komunikasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Ilmu_Pemerintahan&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Bahasa_dan_Sastra_Indonesia&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Jasmani,_Kesehatan,_dan_Rekreasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Pendidikan_Matematika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Sistem_Informasi&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Elektro&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Industri&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Informatika&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Kimia&apos;"/>
+        <memilikiProgramStudi rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Teknik_Mesin&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Atletik"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Free_hotspot"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Mushalla"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Poliklinik"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Transportasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Basket&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lapangan_Bola_Voli&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Lintasan_Lari&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Mesjid_Al_Khoir&apos;"/>
+        <menyediakanFasilitas rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Panjat_Tebing&apos;"/>
+        <memilikiSingkatan rdf:datatype="http://www.w3.org/2001/XMLSchema#string">UNSIKA</memilikiSingkatan>
+        <rdfs:label xml:lang="en">Universitas Singaperbangsa Karawang</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Unpad_Training_Centre&apos; -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#&apos;Unpad_Training_Centre&apos;">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#Fasilitas"/>
+        <rdfs:label xml:lang="en">Unpad Training Centre</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#10">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">10</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#105 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#105">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">105</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#12">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">12</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#120 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#120">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">120</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#13">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">13</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#15">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">15</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#16">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">16</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#17">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">17</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#18">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">18</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#20">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">20</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#21">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">21</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#22">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">22</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#23">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">23</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#24">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">24</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#25">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">25</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#27">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">27</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#28">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">28</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#30">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">30</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#31 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#31">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">31</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#32 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#32">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">32</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#34 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#34">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">34</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#35 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#35">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">35</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#36 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#36">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">36</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#38 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#38">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">38</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#39 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#39">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">39</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#40 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#40">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">40</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#43 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#43">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">43</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#45 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#45">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">45</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#48 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#48">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">48</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#50 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#50">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">50</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#52 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#52">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">52</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#54 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#54">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">54</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#58 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#58">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">58</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#60 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#60">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">60</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#65 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#65">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">65</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#66 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#66">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">66</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#67 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#67">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">67</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#75 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#75">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">75</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#77 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#77">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">77</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#78 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#78">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">78</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#8 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#8">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">8</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#80 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#80">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">80</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TA06D3.com/ontologies/pencarianjurusan#81 -->
+
+    <owl:NamedIndividual rdf:about="http://www.TA06D3.com/ontologies/pencarianjurusan#81">
+        <rdf:type rdf:resource="http://www.TA06D3.com/ontologies/pencarianjurusan#DayaTampung"/>
+        <rdfs:label xml:lang="en">81</rdfs:label>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

@@ -1,0 +1,3075 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.TAD306.com/ontologies/pencarianprodi#"
+     xml:base="http://www.TAD306.com/ontologies/pencarianprodi"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pencarianprodi="http://www.TAD306.com/ontologies/pencarianprodi#">
+    <owl:Ontology rdf:about="http://www.TAD306.com/ontologies/pencarianprodi"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#beradaDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#beradaDi">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#dimilikiOleh -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#dimilikiOleh">
+        <owl:inverseOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT"/>
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#dimilikiOlehProdi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#dimilikiOlehProdi">
+        <owl:inverseOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi"/>
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiProgramStudi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiProgramStudi">
+        <owl:inverseOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#merupakanFakultas"/>
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#menyediakanFasilitas -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#menyediakanFasilitas">
+        <owl:inverseOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#tergantungPada"/>
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#menyediakanProgramStudi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#menyediakanProgramStudi">
+        <owl:inverseOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#terdapatDi"/>
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#merupakanFakultas -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#merupakanFakultas">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#terdapatDi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#terdapatDi">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#tergantungPada -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#tergantungPada">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAlamat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAlamat">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiId -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiId">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiJenjang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiJenjang">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiLink">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiNama -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiNama">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiSingkatan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiSingkatan">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fakultas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#beradaDi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiProgramStudi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#tergantungPada"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Universitas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Politeknik -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#merupakanFakultas"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#terdapatDi"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Universitas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Universitas">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#C">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ekologi Mananusia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Bisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Bisnis">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ekonomi dan Bisnis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ekonomi dan Manajemen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Farmasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Farmasi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Farmasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Hukum -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Hukum">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Hukum</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Budaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Budaya">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ilmu Budaya</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Komunikasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Komunikasi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ilmu Komunikasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Sosial_dan_Ilmu_Politik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Sosial_dan_Ilmu_Politik">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ilmu Sosial dan Ilmu Politik</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Ilmu dan Teknologi Kebumian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:label>Institut Pertanian Bogor</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:label>Institut Teknologi Bandung</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Kedokteran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Gigi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Gigi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Kedokteran Gigi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Hewan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Hewan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Kedokteran Hewan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Keperawatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Keperawatan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Keperawatan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Matematika dan Ilmu Pengetahuan Alam</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Perikanan dan Ilmu Kelautan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Pertanian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Peternakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Psikologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Psikologi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Psikologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Arsitektur_Perencanaan_dan_Pengembangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Arsitektur_Perencanaan_dan_Pengembangan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Arsitektur Perencanaan dan Pengembangan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Bisnis</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis_dan_Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis_dan_Manajemen">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Bisnis dan Manajemen</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Farmasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Farmasi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Farmasi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Ilmu dan Teknologi Hayati</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Sekolah Teknik Elektro dan Informatika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Seni Rupa dan Desain</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Geologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Geologi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknik Geologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Mesin_dan_Dirgantara -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Mesin_dan_Dirgantara">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknik Mesin dan Dirgantara</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknik Pertambangan dan Perminyakan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknik Sipil dan Lingkungan</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknologi Industri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri_Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri_Pertanian">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknologi Industri Pertanian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+        <rdfs:label>Teknologi Pertanian</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+        <rdfs:label>Universitas Padjajaran</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#- -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#-">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#001Meteorologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#001Meteorologi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S01</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Meteorologi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Meteorologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#002Oseanografi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#002Oseanografi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S02</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Oseanografi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Oseanografi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#003Teknik_Geodesi_dan_Geomatika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#003Teknik_Geodesi_dan_Geomatika">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S03</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>Teknik Geodesi dan Geomatika</memilikiLink>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Teknik Geodesi dan Geomatika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#004Teknik_Geologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#004Teknik_Geologi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_dan_Teknologi_Kebumian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S04</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Geologi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Teknik Geologi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#005Astronomi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#005Astronomi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S05</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Astronomi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Astronomi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#006Fisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#006Fisika">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S06</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Fisika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Fisika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#007Kimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#007Kimia">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S07</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Kimia</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Kimia</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#008Matematika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#008Matematika">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S08</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Matematika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Matematika</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#009Desain_Interior -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#009Desain_Interior">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S09</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Desain Interior</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Desain Interior</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#010Desain_Komunikasi_Visual -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#010Desain_Komunikasi_Visual">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S10</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Desain Komunikasi Visual DKV</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Desain Komunikasi Visual</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#011Desain_Produk -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#011Desain_Produk">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S11</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Desain Produk</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Desain Produk</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#012Kria -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#012Kria">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S12</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Kria</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Kria</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#013Seni_Rupa -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#013Seni_Rupa">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Seni_Rupa_dan_Desain"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S13</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Seni Rupa</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Seni Rupa</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#014Manajemen_Rekayasa_Industri -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#014Manajemen_Rekayasa_Industri">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S14</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen Rekayasa Industri</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Manajemen Rekayasa Industri</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#015Teknik_Bioenergi_dan_Kemurgi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#015Teknik_Bioenergi_dan_Kemurgi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S15</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Bioenergi dan Kemurgi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+        <rdfs:label>Teknik Bioenergi dan Kemurgi</rdfs:label>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#016Teknik_Fisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#016Teknik_Fisika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Geologi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S16</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Fisika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#017Teknik_Industri -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#017Teknik_Industri">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S17</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>ITB</memilikiNama>
+        <memilikiNama>Teknik Industri</memilikiNama>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#018Teknik_Kimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#018Teknik_Kimia">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S18</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Kimia</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#019Teknik_Pangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#019Teknik_Pangan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S19</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Pangan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#020Aeronotika_dan_Astronotika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#020Aeronotika_dan_Astronotika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Mesin_dan_Dirgantara"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S20</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Aeronotika dan Astronotika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#021Teknik_Material -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#021Teknik_Material">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Mesin_dan_Dirgantara"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S21</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Material</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#022Teknik_Mesin -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#022Teknik_Mesin">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Mesin_dan_Dirgantara"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S22</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Mesin</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#023Teknik_Geofisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#023Teknik_Geofisika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S23</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Geofisika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#024Teknik_Metalurgi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#024Teknik_Metalurgi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S24</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Metalurgi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#025Teknik_Perminyakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#025Teknik_Perminyakan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S25</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Perminyakan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#026Teknik_Pertambangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#026Teknik_Pertambangan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Pertambangan_dan_Perminyakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S26</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Perminyakan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#027Rekayasa_Infrastruktur_Lingkungan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#027Rekayasa_Infrastruktur_Lingkungan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S28</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Rekayasa Infrastruktur Lingkungan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#028Teknik_dan_Pengelolaan_Sumber_Daya_Air -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#028Teknik_dan_Pengelolaan_Sumber_Daya_Air">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#C"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S28</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik dan Pengelolaan Sumber Daya Air TSA</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#029Teknik_Kelautan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#029Teknik_Kelautan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S29</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Kelautan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#030Teknik_Sipil -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#030Teknik_Sipil">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Sipil_dan_Lingkungan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S30</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Sipil</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#031Arsitektur -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#031Arsitektur">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Arsitektur_Perencanaan_dan_Pengembangan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S31</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Asitektur</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#032Perencanaan_Wilayah_dan_Kota -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#032Perencanaan_Wilayah_dan_Kota">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Arsitektur_Perencanaan_dan_Pengembangan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S32</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Perencanaan Wilayah Dan Kota</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#033Kewirausahaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#033Kewirausahaan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S33</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Kewirausahaan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#034Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#034Manajemen">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S34</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#035Farmasi_Klinik_dan_Komunitas -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#035Farmasi_Klinik_dan_Komunitas">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Farmasi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S35</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Farmasi Klinik dan Komunitas</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#036Sains_dan_Teknologi_Farmasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#036Sains_dan_Teknologi_Farmasi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Farmasi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S36</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Sains dan Teknologi Farmasi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#037Biologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#037Biologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S37</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Biologi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#038Mikrobiologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#038Mikrobiologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S38</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Mikrobiologi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#039Rekayasa_Hayati -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#039Rekayasa_Hayati">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S39</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Rekayasa Hayati</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#040Rekayasa_Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#040Rekayasa_Pertanian">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#041Rekayasa_Kehutanan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#041Rekayasa_Kehutanan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S41</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Rekayasa Kehutanan</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#042Teknologi_Pasca_Panen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#042Teknologi_Pasca_Panen">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Ilmu_dan_Teknologi_Hayati"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S42</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Pasca Panen</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#043Sistem_dan_Teknologi_Informasi_II -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#043Sistem_dan_Teknologi_Informasi_II">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S43</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Sistem dan Teknologi Informasi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#044Teknik_Biomedis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#044Teknik_Biomedis">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S44</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Biomedis</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#045Teknik_Elektro -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#045Teknik_Elektro">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S45</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Elektro</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#046Informatika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#046Informatika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S46</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Informatika</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#047Teknik_Telekomunikasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#047Teknik_Telekomunikasi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S47</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Telekomunikasi</memilikiNama>
+        <memilikiSingkatan>ITB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#048Teknik_Tenaga_Listrik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#048Teknik_Tenaga_Listrik">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Teknik_Elektro_dan_Informatika"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jalan Ganesha 10, Bandung</memilikiAlamat>
+        <memilikiId>S48</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.itb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Tenaga Listrik</memilikiNama>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#049Manajemen_Sumberdaya_Lahan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#049Manajemen_Sumberdaya_Lahan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S49</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen Sumberdaya Lahan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#050Agronomi_dan_Hortikultura -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#050Agronomi_dan_Hortikultura">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S50</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Agronomi dan Hortikultura</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#051Proteksi_Tanaman -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#051Proteksi_Tanaman">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S51</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Proteksi Tanaman</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#052Arsitektur_Lansekap -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#052Arsitektur_Lansekap">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S52</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Arsitektur Lansekap</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#053Kedokteran_Hewan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#053Kedokteran_Hewan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Hewan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S53</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Kedokteran Hewan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#054Teknologi_dan_Manajemen_Perikanan_Budidaya -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#054Teknologi_dan_Manajemen_Perikanan_Budidaya">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Teknologi_Bandung"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S54</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Dan Manajemen Perikanan Budidaya</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#055Manajemen_Sumberdaya_Perairan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#055Manajemen_Sumberdaya_Perairan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S55</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen Sumberdaya Perairan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#056Teknologi_Hasil_Perairan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#056Teknologi_Hasil_Perairan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S56</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Hasil Perairan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#057Teknologi_dan_Manajemen_Perikanan_Tangkap -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#057Teknologi_dan_Manajemen_Perikanan_Tangkap">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S57</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi dan Manajemen Perikanan Tangkap</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#061Ilmu_dan_Teknologi_Kelautan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#061Ilmu_dan_Teknologi_Kelautan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S61</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ilmu dan Teknologi Kelautan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#062Teknologi_Produksi_Ternak -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#062Teknologi_Produksi_Ternak">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S62</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Produksi Ternak</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#063Nutrisi_dan_Teknologi_Pakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#063Nutrisi_dan_Teknologi_Pakan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S63</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Nutrisi dan Teknologi Pakan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#064Teknologi_Hasil_Ternak -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#064Teknologi_Hasil_Ternak">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S64</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Hasil Ternak</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#065Manajemen_Hutan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#065Manajemen_Hutan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S65</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen Hutan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#066Hasil_Hutan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#066Hasil_Hutan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S66</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Hasil Hutan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#067Konservasi_Sumberdaya_Hutan_dan_Ekowisata -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#067Konservasi_Sumberdaya_Hutan_dan_Ekowisata">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S67</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Konservasi Sumberdaya Hutan Dan Ekowisata</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#068Silvikultur -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#068Silvikultur">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kehutanan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S68</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Silvikultur</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#069Teknik_Pertanian_dan_Biosistem -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#069Teknik_Pertanian_dan_Biosistem">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S69</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Pertanian dan Biosistem</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#070Teknologi_Pangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#070Teknologi_Pangan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S70</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Pangan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#071Teknik_Industri_Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#071Teknik_Industri_Pertanian">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S71</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Industri Pertanian</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#072Teknik_Sipil_dan_Lingkungan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#072Teknik_Sipil_dan_Lingkungan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S72</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Teknik Sipil dan Lingkungan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#073Statistika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#073Statistika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S73</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Statistika</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#074Meteorologi_Terapan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#074Meteorologi_Terapan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S74</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Meteorologi Terapan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#075Biologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#075Biologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S75</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Biologi</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#076Kimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#076Kimia">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S76</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Kimia</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#077Matematika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#077Matematika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S77</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Matematika</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#078Ilmu_Komputer -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#078Ilmu_Komputer">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S78</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Komputer</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#079Fisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#079Fisika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S79</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Fisika</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#080Biokimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#080Biokimia">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S80</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Biokimia</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#081Aktuaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#081Aktuaria">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S81</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Aktuaria</memilikiNama>
+        <memilikiNama>IPB</memilikiNama>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#082Ekonomi_Pembangunan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#082Ekonomi_Pembangunan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S82</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ekonomi Pembangunan</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#083Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#083Manajemen">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S83</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Manajemen</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#084Agribisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#084Agribisnis">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S84</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Agribisnis</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#085Ekonomi_Sumberdaya_dan_Lingkungan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#085Ekonomi_Sumberdaya_dan_Lingkungan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S85</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ekonomi Sumberdaya Dan Lingkungan</memilikiNama>
+        <memilikiNama>IPB</memilikiNama>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#086Ekonomi_Syariah -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#086Ekonomi_Syariah">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekonomi_dan_Manajemen"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S86</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ekonomi Syariah</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#087Ilmu_Gizi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#087Ilmu_Gizi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S87</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Gizi</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#088Ilmu_Keluarga_dan_Konsumen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#088Ilmu_Keluarga_dan_Konsumen">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S88</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Keluarga Dan Konsumen</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#089Komunikasi_dan_Pengembangan_Masyarakat -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#089Komunikasi_dan_Pengembangan_Masyarakat">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ekologi_Mananusia"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Dramaga,  Kampus IPB Dramaga, Bogor</memilikiAlamat>
+        <memilikiId>S89</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Komunikasi dan Pengembangan Masyarakat</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#090Bisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#090Bisnis">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Sekolah_Bisnis"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut_Pertanian_Bogor"/>
+        <memilikiAlamat>Jl. Raya Pajajaran, Bogor</memilikiAlamat>
+        <memilikiId>S90</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.ipb.ac.id</memilikiLink>
+        <memilikiNama>Bisnis</memilikiNama>
+        <memilikiSingkatan>IPB</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#091Kedokteran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#091Kedokteran">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor</memilikiAlamat>
+        <memilikiId>S91</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Kedokteran</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#092Kedokteran_Hewan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#092Kedokteran_Hewan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S92</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Kedokteran Hewan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#093Agroteknologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#093Agroteknologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S93</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Agroteknologi</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#094Agribisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#094Agribisnis">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S94</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Agribisnis</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#095Matematika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#095Matematika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S95</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Matematika</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#096Kimia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#096Kimia">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S96</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Kimia</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#097Fisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#097Fisika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S97</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Fisika</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#098Biologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#098Biologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S98</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Biologi</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#099Statistika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#099Statistika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S99</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Statistika</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#100Geofisika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#100Geofisika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D00</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Geofisika</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#101Teknik_Informatika -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#101Teknik_Informatika">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D01</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknik Informatika</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#102Teknik_Elektro -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#102Teknik_Elektro">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>www.unpad.ac.id</memilikiAlamat>
+        <memilikiId>D02</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknik Elektro</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#103Aktuaria -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#103Aktuaria">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Matematika_dan_Ilmu_Pengetahuan_Alam"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D03</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Aktuaria</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#104Kedokteran_Gigi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#104Kedokteran_Gigi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Kedokteran_Gigi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D04</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Kedokteran Gigi</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#105Perikanan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#105Perikanan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D05</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Perikanan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#106Ilmu_Kelautan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#106Ilmu_Kelautan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D06</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Kelautan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#107Perikanan_PSDKU_Pangandaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#107Perikanan_PSDKU_Pangandaran">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Perikanan_dan_Ilmu_Kelautan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Dusun Sukamanah, Desa Cintaratu, Kec. Pangandaran,</memilikiAlamat>
+        <memilikiId>D07</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Perikanan PSDKU Pangandaran</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#108Peternakan_PSDKU_Pangandaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#108Peternakan_PSDKU_Pangandaran">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Tidak_Terakreditasi"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Dusun Sukamanah, Desa Cintaratu, Kec. Pangandaran,</memilikiAlamat>
+        <memilikiId>D08</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Peternakan PSDKU Pangandaran</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#109Peternakan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#109Peternakan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Peternakan"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D09</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Peternakan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#110Ilmu_Hukum -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#110Ilmu_Hukum">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Hukum"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D10</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Hukum</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#111Teknik_Pertanian_dan_Biosistem -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#111Teknik_Pertanian_dan_Biosistem">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S1</memilikiId>
+        <memilikiJenjang>D11</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknik Pertanian dan Biosistem</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#112Teknologi_Pangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#112Teknologi_Pangan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>S12</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Pangan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#113Teknologi_Industri_Pertanian -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#113Teknologi_Industri_Pertanian">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknologi_Industri_Pertanian"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D13</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknologi Industri Pertanian</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#114Teknik_Geologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#114Teknik_Geologi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Teknik_Geologi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D14</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Teknik Geologi</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#115Ilmu_Komunikasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#115Ilmu_Komunikasi">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Komunikasi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D15</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Komunikasi</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#116Ilmu_Perpustakaan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#116Ilmu_Perpustakaan">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Komunikasi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiAlamat>Jln. Raya Bandung-Sumedang Km. 21 Jatinangor, Kab. Sumedang</memilikiAlamat>
+        <memilikiId>D16</memilikiId>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink>www.unpad.ac.id</memilikiLink>
+        <memilikiNama>Ilmu Perpustakaan</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#117Hubungan_Masyarakat -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#117Hubungan_Masyarakat">
+        <beradaDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Ilmu_Komunikasi"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto"/>
+        <terdapatDi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas_Padjajaran"/>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiNama>Hubungan Masyarakat</memilikiNama>
+        <memilikiSingkatan>UNPAD</memilikiSingkatan>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#118Jurnalistik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#118Jurnalistik"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#119Manajemen_Komunikasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#119Manajemen_Komunikasi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#120Televisi_dan_Film -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#120Televisi_dan_Film"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#121Ilmu_Komunikasi_PSDKU_Pangandaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#121Ilmu_Komunikasi_PSDKU_Pangandaran"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#122Keperawatan_PSDKU_Pangandaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#122Keperawatan_PSDKU_Pangandaran"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#123Keperawatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#123Keperawatan"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#124Keperawatan_Kelas_Garut -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#124Keperawatan_Kelas_Garut"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#125Farmasi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#125Farmasi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#126Administrasi_Publik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#126Administrasi_Publik"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#127Ilmu_Hubungan_Internasional -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#127Ilmu_Hubungan_Internasional"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#128Ilmu_Kesejahteraan_Sosial -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#128Ilmu_Kesejahteraan_Sosial"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#129Ilmu_Pemerintahan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#129Ilmu_Pemerintahan"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#130Antropologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#130Antropologi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#131Ilmu_Administrasi_Bisnis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#131Ilmu_Administrasi_Bisnis"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#132Sosiologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#132Sosiologi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#133Ilmu_Politik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#133Ilmu_Politik"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#134Administrasi_Bisnis_PSDKU_Pangandaran -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#134Administrasi_Bisnis_PSDKU_Pangandaran"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#135Akuntansi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#135Akuntansi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#136Ekonomi_Pembangunan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#136Ekonomi_Pembangunan"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#137Manajemen -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#137Manajemen"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#138Ekonomi_Islam -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#138Ekonomi_Islam"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#139Bisnis_Digital -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#139Bisnis_Digital"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#140Sastra_Indonesia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#140Sastra_Indonesia"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#141Sastra_Sunda -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#141Sastra_Sunda"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#142Ilmu_Sejarah -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#142Ilmu_Sejarah"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#143Sastra_Inggris -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#143Sastra_Inggris"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#144Sastra_Perancis -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#144Sastra_Perancis"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#145Sastra_Jepang -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#145Sastra_Jepang"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#146Sastra_Rusia -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#146Sastra_Rusia"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#147Sastra_Jerman -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#147Sastra_Jerman"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#148Sastra_Arab -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#148Sastra_Arab"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#149Psikologi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#149Psikologi"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Asrama,Bale_Padjadjaran,Perpustakaan,Rumah_Sakit_Gigi_Mulut,Rumah_Sakit_Pendidikan,Elearning,Pusat_Bahasa,Pusat_Pelayanan_Basic_Science,Laboratorium_Central,Klinik_Padjadjaran,Bale_Kesehatan,Pusat_Kebugaran_dan_Kecantikan_Fitness_Ideal,Stadion_Jati_Padjadjaran,Bale_Santika,Angkutan_gratis_dalam_kampus,ATM_Center,BTN_Cabang_Unpad,BNI_Dipati_Ukur,BNI_Jatinangor,BRI_Jatinangor,Bank_Mandiri_Jatinangor,Bank_bjb_Kantor_Kas_Unpad,Bale_Sawala,Bale_Rumawat,Bale_Rucita,Grha_Sanusi_Hardjadinata,Auditorium_Bale_Santika,Ruang_Serba_Guna_Gedung_2,Kantor_Pos,Pusat_Pelayanan_Terpadu_Unpad,Unpad_Training_Centre,The_Sixty_Two_Resto">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Hot_Spot_Area,Asrama,Gedung_Olahraga,Teater_Terbuka,Mesjid_Al-Furqan,Training_Center,Poliklinik,BNI&apos;46,Kantin_/_Kafetaria,Kendaraan_dinas,Wartel,Balai_Pertemuan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Hot_Spot_Area,Asrama,Gedung_Olahraga,Teater_Terbuka,Mesjid_Al-Furqan,Training_Center,Poliklinik,BNI&apos;46,Kantin_/_Kafetaria,Kendaraan_dinas,Wartel,Balai_Pertemuan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Masjid_Al-Asya’ari_UNISBA,Perpustakaan,Aula_Serbaguna,Laboratorium,Asrama,Fasilitas_Olahraga,Lapangan_Parkir,Area_Outdoor_Games,Klinik -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Masjid_Al-Asya’ari_UNISBA,Perpustakaan,Aula_Serbaguna,Laboratorium,Asrama,Fasilitas_Olahraga,Lapangan_Parkir,Area_Outdoor_Games,Klinik">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Asrama,Poliklinik,Akses_Internet,Laboratorium -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Asrama,Poliklinik,Akses_Internet,Laboratorium">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Laboratorium,Pusat_Bahasa,ATM_Center,Poliklinik,Musholah_Gedung_Kuliah -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Laboratorium,Pusat_Bahasa,ATM_Center,Poliklinik,Musholah_Gedung_Kuliah">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Pusat_Pengembangan_Karir,Pusat_Inovasi_Pembelajaran,Dukungan_Teknologi_Informasi,Gedung_Perkuliahan,Balai_Pengobatan,Unpar_Guest_House,Kantor_Pos,Bank_dan_Pusat_ATM,Parahyangan_Reksa_Raga -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Perpustakaan,Pusat_Pengembangan_Karir,Pusat_Inovasi_Pembelajaran,Dukungan_Teknologi_Informasi,Gedung_Perkuliahan,Balai_Pengobatan,Unpar_Guest_House,Kantor_Pos,Bank_dan_Pusat_ATM,Parahyangan_Reksa_Raga">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Pusat_Informasi_Kampus,Parkir,Galeri_Soemardja,Perpustakan,Bank_ATM,Tempat_Ibadah,Kantin,Toko,Penginapan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Ruangan_Lab_Statistik,Ruangan_Lab_Sistem_Produksi,Ruangan_Lab_Perancangan_Tata_Letak,Ruangan_Lab_Perancangan_Sistem_Kerja,Ruangan_Lab_Microprocessor,Ruang_Lab_Bahasa -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Ruangan_Lab_Statistik,Ruangan_Lab_Sistem_Produksi,Ruangan_Lab_Perancangan_Tata_Letak,Ruangan_Lab_Perancangan_Sistem_Kerja,Ruangan_Lab_Microprocessor,Ruang_Lab_Bahasa">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#TV_Kampus,Majalah_Kampus,Transportasi_Kota_Bandung,Gedung_Pusat_Kegiatan_Mahasiswa,Food_Court,Perpustakaan,Layanan_Kesehatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#TV_Kampus,Majalah_Kampus,Transportasi_Kota_Bandung,Gedung_Pusat_Kegiatan_Mahasiswa,Food_Court,Perpustakaan,Layanan_Kesehatan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Tahfidz_Camp,Radio_Mahasiswa,Perpustakaan,Taman_-_Free_Hotspot_Area,Baitul_Hamdi_-_Tawheed_Center,Laboratorium,Green_house,Master_Plan_Auditorium,Klinik_Puskesmas,Kolam_Renang_Syariah,Gedung_Kampus_Bertauhid -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Tahfidz_Camp,Radio_Mahasiswa,Perpustakaan,Taman_-_Free_Hotspot_Area,Baitul_Hamdi_-_Tawheed_Center,Laboratorium,Green_house,Master_Plan_Auditorium,Klinik_Puskesmas,Kolam_Renang_Syariah,Gedung_Kampus_Bertauhid">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Transportasi_Kampus,Restoran_Cafe_dan_Kantin,Student_Service_Center,Sport_Center,Asrama,Percetakan_IPB_Press,Pusat_Penelitian,Perpustakaan,IPB_Shop,ATM,Masjid,Penginapan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

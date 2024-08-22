@@ -1,0 +1,198 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v3.8.6">
+    <title>Program Studi di Perguruan Tinggi Terbaik di Wilayah Jawa</title>
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.4/examples/starter-template/">
+    <link th:href="@{css/starter-template.css}" rel="stylesheet" media="screen"/>
+    <link th:href="@{css/bootstrap.css}" rel="stylesheet" media="screen"/>
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            user-select: none;
+        }
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
+    <div class="container text-center">
+        <center><a class="navbar-brand" id="tengah" href="#">Program Studi di Perguruan Tinggi Terbaik di Pulau Jawa</a></center>
+    </div>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault"
+            aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarsExampleDefault"></div>
+</nav>
+<main role="main" class="container">
+    <div class="starter-template">
+        <h1>Wilayah Pulau Jawa</h1>
+        <br>
+        <br>
+        <form class="form-inline my-2 my-lg-0" style="text-align: center; display: block;">
+            <input class="form-control mr-sm-2" type="text" placeholder="Masukkan Nama Program Studi atau Perguruan Tinggi" id="inputan">
+            <button onclick="handleSearchButtonClick()" class="btn btn-primary" type="button">Cari</button>
+        </form>
+    </div>
+    <div class="row">
+        <main role="main" class="container">
+            <div class="col-sm-12">
+                <table class='table'>
+                    <tbody></tbody>
+                </table>
+            </div>
+        </main>
+    </div>
+    <div class="col-sm-12">
+        <center><h4>Daftar Program Studi</h4></center>
+        <table class='table'>
+            <thead>
+            <tr>
+                <th>Nomor</th>
+                <th>Nama Program Studi</th>
+                <th>Nama Perguruan Tinggi</th>
+                <th>Akreditasi Program Studi</th>
+                <th>Jenjang</th>
+                <th>Aksi</th>
+            </tr>
+            </thead>
+            <tbody id="product-list"></tbody>
+        </table>
+    </div>
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center" id="pagination"></ul>
+    </nav>
+</main>
+<script th:src="@{css/jquery.slim.min.js}"></script>
+<script th:src="@{css/bootstrap.js}"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script type="text/javascript">
+    const ITEMS_PER_PAGE = 50;
+
+    function saveSearchState(queryParams, response) {
+        localStorage.setItem('searchParams', JSON.stringify(queryParams));
+        localStorage.setItem('searchResults', JSON.stringify(response));
+    }
+
+    function getProducts(queryParams = "", showMessage = false, page = 1) {
+        var url = "http://localhost:8080/jurusan/search" + queryParams;
+
+        console.log("Request URL:", url);
+
+        $.ajax({
+            type: "GET",
+            url: url,
+            success: function (response) {
+                console.log("Nilai response:", response);
+                if (response && response.length > 0) {
+                    saveSearchState(queryParams, response);
+                    renderPage(response, page);
+                    setupPagination(response, page);
+                } else {
+                    document.getElementById("product-list").innerHTML = "";
+                    if (showMessage) {
+                        alert("Data program studi yang Anda cari tidak tersedia.");
+                    }
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Permintaan AJAX gagal:", status, error);
+                if (showMessage) {
+                    alert("Terjadi kesalahan saat mengambil data. Silakan coba lagi.");
+                }
+            }
+        });
+    }
+
+    function handleSearchButtonClick(showMessage = true, page = 1) {
+        var inp = document.getElementById('inputan').value;
+        var queryParams = "?key=" + encodeURIComponent(inp);
+
+        getProducts(queryParams, showMessage, page);
+    }
+
+    function renderPage(data, page) {
+        var start = (page - 1) * ITEMS_PER_PAGE;
+        var end = start + ITEMS_PER_PAGE;
+        var paginatedData = data.slice(start, end);
+        populateTable(paginatedData);
+    }
+
+    function setupPagination(data, currentPage) {
+        var totalPages = Math.ceil(data.length / ITEMS_PER_PAGE);
+        var pagination = document.getElementById('pagination');
+        pagination.innerHTML = "";
+
+        for (let i = 1; i <= totalPages; i++) {
+            var li = document.createElement('li');
+            li.className = 'page-item' + (i === currentPage ? ' active' : '');
+            li.innerHTML = `<a class="page-link" href="javascript:void(0)" onclick="handleSearchButtonClick(true, ${i})">${i}</a>`;
+            pagination.appendChild(li);
+        }
+    }
+
+    function populateTable(data) {
+        var i = 1;
+        document.getElementById("product-list").innerHTML = "";
+
+        const accreditationOrder = {
+            'Unggul': 1,
+            'A': 2,
+            'B': 3,
+            'C': 4,
+            'Tidak Terakreditasi': 5,
+            '-': 6
+        };
+
+        data.sort((a, b) => {
+            const aAccreditation = decodeURIComponent(a.akreditasi.substring(48).replace(/_/g, ' '));
+            const bAccreditation = decodeURIComponent(b.akreditasi.substring(48).replace(/_/g, ' '));
+            return accreditationOrder[aAccreditation] - accreditationOrder[bAccreditation];
+        });
+
+        data.forEach(function (item) {
+            $("#product-list").append(
+                "<tr>" +
+                "<td>" + i + "</td>" +
+                "<td>" + decodeURIComponent(item.programStudi.substring(51).replace(/_/g, ' ')) + "</td>" +
+                "<td>" + decodeURIComponent(item.pt.substring(48).replace(/_/g, ' ')) + "</td>" +
+                "<td>" + decodeURIComponent(item.akreditasi.substring(48).replace(/_/g, ' ')) + "</td>" +
+                "<td>" + decodeURIComponent(item.jenjangprodi.substring(48).replace(/_/g, ' ')) + "</td>" +
+                "<td> <a href='/jurusan/id/" + item.id + "'>Detail</a> </td>" +
+                "</tr>"
+            );
+            i++;
+        });
+    }
+
+    function loadSearchState() {
+        var searchParams = localStorage.getItem('searchParams');
+        var searchResults = localStorage.getItem('searchResults');
+
+        if (searchParams) {
+            searchParams = JSON.parse(searchParams);
+        }
+
+        if (searchResults) {
+            searchResults = JSON.parse(searchResults);
+            renderPage(searchResults, 1);
+            setupPagination(searchResults, 1);
+        }
+    }
+
+    document.addEventListener('DOMContentLoaded', function() {
+        loadSearchState();
+    });
+</script>
+</body>
+</html>

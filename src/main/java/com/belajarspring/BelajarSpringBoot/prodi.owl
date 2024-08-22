@@ -1,0 +1,459 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.TAD306.com/ontologies/pencarianprodi#"
+     xml:base="http://www.TAD306.com/ontologies/pencarianprodi"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:pencarianprodi="http://www.TAD306.com/ontologies/pencarianprodi#">
+    <owl:Ontology rdf:about="http://www.TAD306.com/ontologies/pencarianprodi"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#beradaDiFakultas -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#beradaDiFakultas">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#beradaDiPT -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#beradaDiPT">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#menyediakanFasilitas -->
+
+    <owl:ObjectProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#menyediakanFasilitas">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiAlamat -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAlamat">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiJenjang -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiJenjang">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiLink -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiLink">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#memilikiSingkatan -->
+
+    <owl:DatatypeProperty rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#memilikiSingkatan">
+        <rdfs:domain rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fakultas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#beradaDiFakultas"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:unionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik"/>
+                    <rdf:Description rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Universitas"/>
+                </owl:unionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiPT"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Politeknik -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi">
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#beradaDiFakultas"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#beradaDiPT"/>
+                <owl:someValuesFrom rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#memilikiAkreditasiProdi"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Universitas -->
+
+    <owl:Class rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Universitas">
+        <rdfs:subClassOf rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#PerguruanTinggi"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#C">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fak_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fak_A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fak_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fak_B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Fak_C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Fak_C">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fakultas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut_A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut_B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Institut_C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Institut_C">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Institut"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Lab -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Lab">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Lapangan -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Lapangan">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Pol_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Pol_A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Pol_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Pol_B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Pol_c -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Pol_c">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Politeknik"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Prodi_a -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Prodi_a">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <beradaDiFakultas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fak_B"/>
+        <beradaDiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Univ_B"/>
+        <memilikiAkreditasiPT rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#A"/>
+        <menyediakanFasilitas rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Wifi"/>
+        <memilikiAlamat>Jl. Bersama</memilikiAlamat>
+        <memilikiJenjang>D3</memilikiJenjang>
+        <memilikiJenjang>S1</memilikiJenjang>
+        <memilikiLink rdf:datatype="http://www.w3.org/2001/XMLSchema#string">www.kampus.com</memilikiLink>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Prodi_b -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Prodi_b">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#C"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Prodi_c -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Prodi_c">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#ProgramStudi"/>
+        <memilikiAkreditasiProdi rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#B"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Univ_A -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Univ_A">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Univ_B -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Univ_B">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Univ_C -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Univ_C">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Universitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#Wifi -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#Wifi">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Fasilitas"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.TAD306.com/ontologies/pencarianprodi#- -->
+
+    <owl:NamedIndividual rdf:about="http://www.TAD306.com/ontologies/pencarianprodi#-">
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#Akreditasi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiPerguruanTinggi"/>
+        <rdf:type rdf:resource="http://www.TAD306.com/ontologies/pencarianprodi#AkreditasiProgramStudi"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
